@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Карточка пользователя"
+        app:titleTextColor="@color/white"
+        app:menu="@menu/exit_menu"
+        android:background="@color/black"/>
+
+    <ImageView
+        android:id="@+id/showImageIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_person_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.05"
+        tools:ignore="ContentDescription"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/showImageIV"
+        tools:layout_editor_absoluteX="16dp">
+
+
+        <TextView
+            android:id="@+id/lastNameTV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="@string/lastname"
+            android:textSize="28sp"
+            android:importantForAutofill="no"
+            android:textAlignment="center"
+            tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+        <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="@string/name"
+            android:textSize="28sp"
+            android:importantForAutofill="no"
+            android:textAlignment="center"
+            tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+        <TextView
+            android:id="@+id/phoneTV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="@string/phone"
+            android:textSize="28sp"
+            android:importantForAutofill="no"
+            android:textAlignment="center"
+            tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+        <TextView
+            android:id="@+id/ageTV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Возраст"
+            android:textSize="28sp"
+            android:importantForAutofill="no"
+            android:textAlignment="center"
+            android:textColorHint="#546E7A"
+            tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+        <TextView
+            android:id="@+id/untilBirthdayTV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Время до дня рождения"
+            android:textSize="28sp"
+            android:importantForAutofill="no"
+            android:textAlignment="center"
+            android:textColorHint="#546E7A"
+            tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
